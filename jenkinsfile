@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage("Check Node Version") {
+            steps{
+                sh "node --version"
+            }
+        }
+        stage("install dependencies") {
+            steps{
+                sh "npm --version"
+                sh "npm install"
+            }
+        }
+        stage("Test") {
+            steps{
+                echo "node index.js"
+            }
+        }
+        stage("Release the Version") {
+            steps{
+                echo "Release the Version"
+            }
+        }
+    }
+}
