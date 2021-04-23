@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Test") {
             steps{
-                echo "node index.js"
+                sh "node index.js"
             }
         }
         stage("Release the Version") {
